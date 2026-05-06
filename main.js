@@ -2,6 +2,7 @@ console.log(document);
 
 const title = document.getElementById("title");
 const text = document.querySelector("text");
+const btn = document.getElementById("btn");
 
 console.log(title);
 console.log(text);
@@ -13,3 +14,9 @@ title.style.padding = "10px";
 text.style.fontSize = "18px";
 text.style.fontStyle = "italic";
 text.style.color = "darkgreen";
+
+btn.addEventListener("click", () => {
+    alert("Кнопка нажата!");
+    btn.style.backgroundColor = "#4CAF50";
+    btn.style.color = "white";
+});
