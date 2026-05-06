@@ -6,6 +6,7 @@ const btn = document.getElementById("btn");
 const input = document.getElementById("nameInput");
 const button = document.getElementById("showName");
 const output = document.getElementById("output");
+const clearButton = document.getElementById("clearButton");
 
 console.log(title);
 console.log(text);
@@ -33,4 +34,10 @@ btn.addEventListener("click", () => {
     }
 
 });
+clearButton.addEventListener("click", () => {
+    input.value = "";
+    output.textContent = "";
+});
+output.style.color = "";
+input.focus();
 
