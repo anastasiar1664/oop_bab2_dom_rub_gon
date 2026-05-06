@@ -3,6 +3,9 @@ console.log(document);
 const title = document.getElementById("title");
 const text = document.querySelector("text");
 const btn = document.getElementById("btn");
+const input = document.getElementById("nameInput");
+const button = document.getElementById("showName");
+const output = document.getElementById("output");
 
 console.log(title);
 console.log(text);
@@ -20,3 +23,14 @@ btn.addEventListener("click", () => {
     btn.style.backgroundColor = "#4CAF50";
     btn.style.color = "white";
 });
+btn.addEventListener("click", () => {
+    if (input.ariaValueMax.trim() !== "") {
+        output.textContent = `Привет, ${input.value}!`;
+        output.style.color = "green";
+    } else {
+        output.textContent = "Пожалуйста, введите имя!";
+        output.style.color = "red";
+    }
+
+});
+
