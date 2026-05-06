@@ -7,6 +7,10 @@ const input = document.getElementById("nameInput");
 const button = document.getElementById("showName");
 const output = document.getElementById("output");
 const clearButton = document.getElementById("clearButton");
+const form = document.getElementById("userForm");
+const usernameInput = document.getElementById("username");
+const ageInput = document.getElementById("age");
+const result = document.getElementById("formResult");
 
 console.log(title);
 console.log(text);
@@ -40,4 +44,11 @@ clearButton.addEventListener("click", () => {
 });
 output.style.color = "";
 input.focus();
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const name = usernameInput.value;
+    const age = ageInput.value;
+    result.textContent = `Имя: ${name}, Возраст: ${age}`;
+});
 
